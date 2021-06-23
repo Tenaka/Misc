@@ -2,16 +2,12 @@
 .Synopsis
 
 Choice Menu
-PS or ISE for execution of script
 
 .DESCRIPTION
 Based choices on:
 https://social.technet.microsoft.com/Forums/scriptcenter/en-US/1e738c69-5c0c-4b89-9775-c75de1baed24/powershell-multiple-choice-menu?forum=ITCG
 
 Added the abiltiy to call on functions
-
-
-Detect if ISE or PS is running the script, set execution path based on which environment.
 
 #>
 #Confirm for elevated admin
