@@ -7,3 +7,4 @@ $notherVariable = $FolderList | ?{$AdUserName -notcontains $_}
 
 #Compare both lists and var the objects that arent in either list
 Compare-Object $FolderList $AdUserName | ?{$_.SideIndicator -eq '<=' -or $_.SideIndicator -eq '=>' } | Select-Object -ExpandProperty InputObject
+Compare-Object $FolderList $AdUserName | ?{$_.SideIndicator -eq '==' } | Select-Object -ExpandProperty InputObject
