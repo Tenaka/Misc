@@ -1,0 +1,9 @@
+$FolderList = "11","22","33","aa"
+
+$AdUserName = "22","33","bb","cc","dd","12","a1","11"
+
+#One way
+$notherVariable = $FolderList | ?{$AdUserName -notcontains $_}
+
+#Compare both lists and var the objects that arent in either list
+Compare-Object $FolderList $AdUserName | ?{$_.SideIndicator -eq '<=' -or $_.SideIndicator -eq '=>' } | Select-Object -ExpandProperty InputObject
